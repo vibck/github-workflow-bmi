@@ -5,4 +5,4 @@ const PORT = 3000
 
 app.use(express.static("frontend"))
 
-app.listen(PORT, () => console.log("server runs")
+app.listen(PORT, () => console.log("server runs"));
