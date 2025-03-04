@@ -18,7 +18,7 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
-        run: npm install
+        run: npx jest --testEnvironment=jsdom
 
       - name: Test the CalculateBMI function
         run: npm test
