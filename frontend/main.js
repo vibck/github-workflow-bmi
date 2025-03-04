@@ -6,8 +6,8 @@ Array
 
 function updateUI() {
 // Logik zur Aktualisierung des UI hier
-  const weight = parseFloat(document.getElementById('weight').value);
-  const height = parseFloat(document.getElementById('height').value);
+  const weight = document.getElementById('weight').value;
+  const height = document.getElementById('height').value;
   const bmi = calculateBMI(weight, height);
   console.log("weight: %s, height: %s, bmi: %s", weight, height, bmi);
 }
