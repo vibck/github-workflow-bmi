@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 const { calculateBMI } = require("./frontend/main")
 
 test('Berechnung des BMI', () => {
