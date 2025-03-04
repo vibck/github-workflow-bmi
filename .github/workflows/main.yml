@@ -19,3 +19,8 @@ jobs:
 
       - name: Run Tests
         run: npx jest --testEnvironment=jsdom
+
+      - name: Setup ssh keys
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
