@@ -27,9 +27,4 @@ jobs:
 
       - name: Deploy to EC2
         run: | 
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@${{ secrets.EC2_PUBLIC_IP }} 
-          mkdir /home/ubuntu/bmi-calculator
-          cd /home/ubuntu/bmi-calculator
-          git clone git@github.com:vibck/github-workflow-bmi.git .
-          npm install
-          node server.js
+          sssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@${{ secrets.EC2_PUBLIC_IP }} "mkdir -p /home/ubuntu/bmi-calculator && cd /home/ubuntu/bmi-calculator && git clone git@github.com:vibck/github-workflow-bmi.git . && npm install && node server.js"
